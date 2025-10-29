@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" >
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="content">
+    <div class="container">
+        <h1 class="text-center">Register</h1>
+        <form>
+            <table>
+                <tr>
+                <th><label for="userInput">Username:</label></th>
+                <td><input type="text" id="userInput" required /></td>
+                </tr>
+                <tr>
+                <th><label for="emailInput">Email:</label></th>
+                <td><input type="text" id="emailInput" required /></td>
+                </tr>
+                <tr>
+                <th><label for="passInput">Password:</label></th>
+                <td><input type="password" id="passInput" required /></td>
+                </tr>
+                <tr>
+                <th><label for="confirmPassInput">Confirm Password:</label></th>
+                <td><input type="password" id="confirmPassInput" required /></td>
+                </tr>
+            </table>
+            <label for="dateInput"><b>Date of Birth:</b></label>
+            <input type="date" id = "dateInput" required />
+            <br>
+            <button type="submit" class="w-full p-3 bg-blue-500 text-white rounded hover:bg-blue-600">Login</button>
+            <a href="login.html" class="block text-center w-full p-3 mt-4 text-blue-500 hover:underline">Already have an account? Login</a>
+        </form>
+    </div>
+</body>
+</html>
