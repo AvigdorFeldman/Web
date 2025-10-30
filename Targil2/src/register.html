@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link href= "https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" >
+</head>
+<body class="min-h-screen flex items-center justify-center bg-gray-100 text-gray-800">
+    <div class="bg-white p-5 rounded-lg shadow w-72">
+        <h1 class="text-gray-800 font-bold text-2xl mb-5 text-center">Register</h1>
+        <form>
+            <table class="text-left">
+                <tr>
+                <th><label for="userInput">Username:</label></th>
+                <td class="py-3"><input class="w-full p-2.5 border border-gray-300 rounded text-gray-800 box-border"  type="text" id="userInput" required /></td>
+                </tr>
+                <tr>
+                <th><label for="emailInput">Email:</label></th>
+                <td class="py-3"><input class="w-full p-2.5 border border-gray-300 rounded text-gray-800 box-border" type="text" id="emailInput" required /></td>
+                </tr>
+                <tr>
+                <th><label for="passInput">Password:</label></th>
+                <td class="py-3"><input class="w-full p-2.5 border border-gray-300 rounded text-gray-800 box-border" type="password" id="passInput" required /></td>
+                </tr>
+                <tr>
+                <th><label for="confirmPassInput">Confirm Password:</label></th>
+                <td class="py-3"><input class="w-full p-2.5 border border-gray-300 rounded text-gray-800 box-border" type="password" id="confirmPassInput" required /></td>
+                </tr>
+            </table>
+            <label for="dateInput"><b>Date of Birth:</b></label>
+            <input class="w-full p-2.5 border border-gray-300 rounded text-gray-800 box-border mb-5" type="date" id = "dateInput" required />
+            <br>
+            <button type="submit" class="w-full p-3 bg-blue-500 text-white rounded hover:bg-blue-600">Login</button>
+            <a href="login.html" class="block text-center w-full p-3 mt-4 text-blue-500 hover:underline">Already have an account? Login</a>
+        </form>
+    </div>
+</body>
+</html>
