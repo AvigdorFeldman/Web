@@ -121,6 +121,7 @@ button:focus-visible {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
+    background-color: white;
     border-radius: 4px;
     box-sizing: border-box;
     color: #333;
