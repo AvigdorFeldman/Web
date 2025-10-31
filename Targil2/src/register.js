@@ -1,7 +1,7 @@
 const html = document.documentElement;
 const registerForm = document.getElementById('registerForm');
 const registerMessage = document.getElementById('registerMessage');
-
+let isAdmin;
 registerForm.addEventListener('submit',async(event)=>{
     event.preventDefault();
     const username = document.getElementById('userInput').value;
@@ -26,8 +26,12 @@ registerForm.addEventListener('submit',async(event)=>{
             registerMessage.classList.remove("text-green-500");
             registerMessage.classList.add("text-red-500");
         }
-
-        users.push({username, email, password, dob});
+        if(users && users.length==0){
+            isAdmin = true;
+        }else{
+            isAdmin = false;
+        }
+        users.push({username:username, email:email, password:password, dob:dob, isAdmin:isAdmin});
 
         localStorage.setItem('users', JSON.stringify(users));
 

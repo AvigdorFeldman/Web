@@ -21,6 +21,10 @@ loginForm.addEventListener('submit', (event)=>{
         loginMessage.textContent = 'Login successful!';
         loginMessage.classList.remove('text-red-500');
         loginMessage.classList.add('text-green-500');
+        localStorage.setItem('currentUser', nameOrEmail);
+        if(user.isAdmin){
+            window.location.href = "userManagement.html";
+        }
     }else{
         loginMessage.textContent = 'Invalid username/email or password.';
         loginMessage.classList.remove('text-green-500');
