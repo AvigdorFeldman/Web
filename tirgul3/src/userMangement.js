@@ -109,9 +109,8 @@ let editable = {
             //@TODO save changes in file
             try{
                 const row = parseInt(editable.ccell.dataset.row, 10);
-                const col = parseInt(editable.ccell.dataset.col, 10);
                 const header = editable.ccell.dataset.header;
-                if (!isNaN(row) && col && header && users && users[row]) {
+                if (!isNaN(row) && header && users && users[row]) {
                     users[row][header]= editable.ccell.innerText;
                     //update json file
                     const usersString = JSON.stringify(users, null, 2);
@@ -126,7 +125,7 @@ let editable = {
                     URL.revokeObjectURL(url); // ניקוי המשאב מהזיכרון*/
                 }else{
                     console.error('Invalid row or field for updating user data.');
-                    console.log(row, col,header,users, users[row]);
+                    console.log(row, header,users, users[row]);
                 }
             } catch (error) {
                 console.error('Error updating user data:', error);

@@ -18,6 +18,6 @@
     "email": "bobo",
     "password": "bobo",
     "dob": "2025-11-13",
-    "isAdmin": "true"
+    "isAdmin": "false"
   }
 ]
