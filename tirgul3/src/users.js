@@ -18,7 +18,7 @@ function initUsers() {
         if(rawFile.status === 200 || rawFile.status == 0) {
             let allText = rawFile.responseText; // קריאת הטקסט מהתגובה
             let data = JSON.parse(allText); // המרת הטקסט לאובייקט
-            users = data.users; // שמירת מערך המשתמשים במשתנה גלובלי
+            users = data; // שמירת מערך המשתמשים במשתנה גלובלי
        }
     }
   }
