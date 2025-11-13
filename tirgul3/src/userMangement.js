@@ -12,9 +12,9 @@ window.onload = function() {
         .then(response =>  response.json()) //שמירת אובייקט התשובה
         .then(jsonData => { //שמירת נתוני הקובץ
     //שליחה לפונקציה לטעינה לטבלה
-                users = jsonData.users;
-                populateTable('usersData', jsonData)})
-        .catch(error=> this.alert("Didn't fetch"))   
+                users = jsonData;
+                populateTable('usersData', users)})
+        .catch(error=> {console.error(error);this.alert("Didn't fetch");})   
 };
 
 function populateTable(tableId, jsonData) {
@@ -26,9 +26,9 @@ function populateTable(tableId, jsonData) {
     thead.innerHTML = '';
     tbody.innerHTML = '';
     //אם קיימים נתוני משתמשים בקובץ
-    if (jsonData.users.length > 0) {
+    if (users.length > 0) {
 	  //ניקח את כל המפתחות מקובץ לתוך משתנה
-        const headers = Object.keys(jsonData.users[0]);
+        const headers = Object.keys(users[0]);
 	  //עבור כל מפתח
         headers.forEach(header => {
             if(header != "password"){ //אם הוא לא סיסמא
@@ -41,7 +41,7 @@ function populateTable(tableId, jsonData) {
             }
         });
         //עבור כל אובייקט בתוך המערך
-        jsonData.users.forEach((item, rowIndex) => {
+        users.forEach((item, rowIndex) => {
 		//ניצור רשומה בטבלה
             const tr = document.createElement('tr');
 		//לכל מפתח שאינו סיסמא

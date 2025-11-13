@@ -1,6 +1,14 @@
 const file="./db.json";
 let users =[];
 
+fetch('./db.json')
+    .then(response => response.json())
+    .then(data => {
+        users = data;
+        console.log('Users loaded:', users);
+    })
+    .catch(error => console.error('Error loading users:', error));
+
 function initUsers() {
     let rawFile = new XMLHttpRequest(); //יצירת אובייקט בקשה חדש
     rawFile.open("GET", file , false); //פתיחת בקשה לפתיחת הקובץ

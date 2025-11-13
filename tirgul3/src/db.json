@@ -1,19 +1,23 @@
-{
-	"users": [
-        {
-            "username": "lala",
-            "email": "lala@gmail.com",
-            "password": "1234",
-            "dob": "1990-10-13",
-		    "isAdmin": true
-        },
-        {
-            "username": "koko",
-            "email": "koko@gmail.com",
-            "password": "1234",
-            "dob": "1995-05-20",
-            "isAdmin": false
-        }
-        
-    ]
-}
+[
+  {
+    "username": "lala",
+    "email": "lala@gmail.com",
+    "password": "1234",
+    "dob": "1990-10-13",
+    "isAdmin": true
+  },
+  {
+    "username": "koko",
+    "email": "koko@gmail.com",
+    "password": "1234",
+    "dob": "1995-05-20",
+    "isAdmin": false
+  },
+  {
+    "username": "bobo",
+    "email": "bobo",
+    "password": "bobo",
+    "dob": "2025-11-13",
+    "isAdmin": "true"
+  }
+]
