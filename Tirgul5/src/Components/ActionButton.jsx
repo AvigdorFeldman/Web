@@ -1,0 +1,15 @@
+export default function ActionButton(props) {
+    const buttonStyle = {
+      backgroundColor: props.backgroundColor,
+      color: 'white',
+      padding: '10px 20px',
+      border: 'none',
+      borderRadius: '5px',
+      cursor: 'pointer',
+    };
+    return (
+      <button style={buttonStyle} onClick={props.onClick}>
+        {props.text}
+      </button>
+    );
+}
