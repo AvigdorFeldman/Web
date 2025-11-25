@@ -14,4 +14,4 @@ enum Shape{
     Square = "SQUARE",
     Rectangle = "RECTANGLE"
 }
-let myShape: Shape.Circle | Shape.Square = Shape.Rectangle; // Error: Type 'Shape.RECTANGLE' is not assignable to type 'Shape.Circle | Shape.Square'.
+//let myShape: Shape.Circle | Shape.Square = Shape.Rectangle; // Error: Type 'Shape.RECTANGLE' is not assignable to type 'Shape.Circle | Shape.Square'.
