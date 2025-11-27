@@ -1,7 +1,14 @@
 import LabeledInput from './LabeledInput';
 import ActionButton from './ActionButton';
+import Captcha from './Captch';
+import { useState } from 'react';
 export default function Register() {
+    const [captchaPassed, setCaptchaPassed] = useState(false);
     const handleClick = (buttonText) => {
+        if (!captchaPassed) {
+            alert('Please complete the captcha');
+            return;
+        }
         alert(`Button "${buttonText}" clicked!`);
     };
     return (
@@ -12,8 +19,9 @@ export default function Register() {
                 <LabeledInput label="Password" type="password"></LabeledInput>
                 <LabeledInput label="Confirm Password" type="password"></LabeledInput>
                 <LabeledInput label="Date of Birth" type="date"></LabeledInput>
+                <Captcha onValidate={(ok) => setCaptchaPassed(ok)} />
                 <ActionButton text="Register" 
-                backgroundColor="CornflowerBlue" onClick={() => 
+                backgroundColor="CornflowerBlue" disabled={!captchaPassed} onClick={() => 
                 handleClick("Register")} />
             </form>
         </div>
