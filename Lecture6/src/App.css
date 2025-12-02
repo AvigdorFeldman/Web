@@ -1,0 +1,7 @@
+@import "tailwindcss";
+#root {
+  margin: 0;
+}
+#app{
+  transition: background-color 300ms ease, transform 180ms ease;
+}
