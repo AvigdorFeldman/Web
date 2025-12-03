@@ -8,7 +8,7 @@ export default function ActionButton(props) {
       cursor: 'pointer',
     };
     return (
-      <button style={buttonStyle} onClick={props.onClick}>
+      <button style={buttonStyle} onClick={(e) => handleLogin(e)}>
         {props.text}
       </button>
     );
