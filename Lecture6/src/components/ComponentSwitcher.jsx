@@ -3,6 +3,7 @@ import OxygenTank from './OxygenTank';
 import SurgicalArmControl from './SurgicalArmControl';
 import GalaxyEmergencySystem from './GalaxyEmergencySystem';
 import AlienSignalReceiver from './AlienSignalReceiver';
+import MissileInterceptor from './MissileInterceptor';
 function ComponentSwitcher() {
     const [activeComponent, setActiveComponent] = useState('');
     const components_map = {
@@ -10,6 +11,7 @@ function ComponentSwitcher() {
         'SurgicalArmControl (useReducer)': <SurgicalArmControl />,
         'GalaxyEmergencySystem (useContext)': <GalaxyEmergencySystem />,
         'AlienSignalReceiver (useEffect)': <AlienSignalReceiver />,
+        'MissileInterceptor (useMemo)': <MissileInterceptor />,
     };
     const handleSwitchComponent = (componentName) => { setActiveComponent(componentName); };
     const componentToShow = components_map[activeComponent] || <p className="text-black-500 italic">No component selected.</p>;
